@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+class SplashScreen extends StatefulWidget {
+  SplashScreen({Key key, @required this.seconds, this.title}) : super(key: key);
 
+  //启动图持续时间
+  final int seconds;
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _SplashScreenState createState() => _SplashScreenState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _SplashScreenState extends State<SplashScreen> {
 
   startTime() async {
+    print('收到title为：${widget.title}');
     //设置启动图生效时间
-    var _duration = new Duration(seconds: 3);
+    var _duration = new Duration(seconds: widget.seconds);
     return new Timer(_duration, navigationPage);
   }
 

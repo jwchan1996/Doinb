@@ -13,7 +13,7 @@ class Main extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.teal,
       ),
-      home: MyHomePage(title: 'CliCli'),
+      home: new SplashScreen(seconds: 3, title: '首页',),
       routes: <String, WidgetBuilder>{
         '/Index': (BuildContext context) => new Index()
       },
