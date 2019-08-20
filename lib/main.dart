@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './splashScreen.dart';
 import './app.dart';
 import './views/Index/index.dart';
 
@@ -13,8 +14,9 @@ class Main extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.teal,
       ),
-      home: new SplashScreen(seconds: 3, title: '首页',),
+      home: new SplashScreen(seconds: 3),
       routes: <String, WidgetBuilder>{
+        '/App': (BuildContext context) => new App(),
         '/Index': (BuildContext context) => new Index()
       },
     );

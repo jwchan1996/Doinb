@@ -1,43 +1,44 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
 
-class SplashScreen extends StatefulWidget {
-  SplashScreen({Key key, @required this.seconds, this.title}) : super(key: key);
-
-  //启动图持续时间
-  final int seconds;
-  final String title;
-
+class App extends StatefulWidget {
   @override
-  _SplashScreenState createState() => _SplashScreenState();
+  _AppState createState() => _AppState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _AppState extends State<App> {
+  int _currentIndex = 0;
 
-  startTime() async {
-    print('收到title为：${widget.title}');
-    //设置启动图生效时间
-    var _duration = new Duration(seconds: widget.seconds);
-    return new Timer(_duration, navigationPage);
-  }
+  final _widgetOptions = [
+    Text('Index 0: 首页'),
+    Text('Index 1: 番剧'),
+    Text('Index 2: 我的'),
+  ];
 
-  void navigationPage() {
-    Navigator.of(context).pushReplacementNamed('/Index');
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    startTime();
+  void onItemTapped(int idx) {
+    setState(() {
+      _currentIndex = idx;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
-    return new Scaffold(
-      body: new Center(
-        child: new Image.asset('assets/images/clicli-open.png'),
+    return Scaffold(
+      appBar: AppBar(title: Text('我是头部')),
+      body: Center(
+        child: _widgetOptions.elementAt(_currentIndex),
       ),
+      bottomNavigationBar: BottomNavigationBar(
+          items: [
+            BottomNavigationBarItem(
+                icon: Icon(Icons.home), title: Text('首页')),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.book), title: Text('番剧')),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.school), title: Text('我的')),
+          ],
+          fixedColor: Colors.green,
+          currentIndex: _currentIndex,
+          onTap: onItemTapped),
     );
   }
-
 }
