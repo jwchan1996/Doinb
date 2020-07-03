@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 class SplashScreen extends StatefulWidget {
-  SplashScreen({Key key, @required this.seconds}) : super(key: key);
+  SplashScreen({Key key, this.seconds}) : super(key: key);
 
   //启动图持续时间
   final int seconds;

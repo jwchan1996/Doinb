@@ -12,10 +12,6 @@ class Index extends StatelessWidget {
             Text(
               'You have pushed the button this many times:',
             ),
-            Text(
-              '666',
-              style: Theme.of(context).textTheme.display4,
-            ),
           ],
         ),
       ),

@@ -23,7 +23,7 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('我是头部')),
+      appBar: AppBar(title: Text('顶部')),
       body: Center(
         child: _widgetOptions.elementAt(_currentIndex),
       ),
