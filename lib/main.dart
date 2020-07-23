@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:clicli/splashScreen.dart';
-import 'package:clicli/router/router.dart' as router;
+import 'package:doinb/splashScreen.dart';
+import 'package:doinb/router/router.dart' as router;
 
 void main() => runApp(Main());
 
@@ -9,7 +9,7 @@ class Main extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'CliCli',
+      title: 'Doinb',
       theme: ThemeData(
         primarySwatch: Colors.teal,
       ),

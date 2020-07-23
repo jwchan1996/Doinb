@@ -1,4 +1,4 @@
-name: clicli
+name: doinb
 description: A new Flutter application.
 
 # The following defines the version and build number for your application.
@@ -22,6 +22,10 @@ dependencies:
 
   # 网络请求
   dio: ^3.0.3
+  # 吐司
+  flutter_flexible_toast: any
+  # 加载loading
+  flutter_spinkit: "^4.1.2"
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

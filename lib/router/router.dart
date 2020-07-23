@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:clicli/app.dart';
-import 'package:clicli/pages/home_stack/home.dart';
-import 'package:clicli/pages/home_stack/mine.dart';
-import 'package:clicli/pages/search.dart';
-import 'package:clicli/pages/github_user.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:doinb/app.dart';
+import 'package:doinb/pages/home_stack/home.dart';
+import 'package:doinb/pages/home_stack/mine.dart';
+import 'package:doinb/pages/search.dart';
+import 'package:doinb/pages/github_user.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -13,10 +14,13 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(
           builder: (context) => MinePage());
     case '/search':
+      //上下滑动切换
       return MaterialPageRoute(
-          builder: (context) => SearchPage());
+          builder: (context) => SearchPage()
+      );
     case '/github_user':
-      return MaterialPageRoute(
+      //左右滑动切换
+      return CupertinoPageRoute(
           builder: (context) => GithubUserPage());
     default:
       return MaterialPageRoute(builder: (context) => App());
