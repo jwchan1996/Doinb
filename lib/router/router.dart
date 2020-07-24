@@ -5,6 +5,7 @@ import 'package:doinb/pages/home_stack/home.dart';
 import 'package:doinb/pages/home_stack/mine.dart';
 import 'package:doinb/pages/search.dart';
 import 'package:doinb/pages/github_user.dart';
+import 'package:doinb/pages/get_user_media.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -22,6 +23,9 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       //左右滑动切换
       return CupertinoPageRoute(
           builder: (context) => GithubUserPage());
+    case '/get_user_media':
+      return CupertinoPageRoute(
+          builder: (context) => GetUserMediaPage());
     default:
       return MaterialPageRoute(builder: (context) => App());
   }

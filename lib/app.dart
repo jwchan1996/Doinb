@@ -37,7 +37,7 @@ class _AppState extends State<App> {
             BottomNavigationBarItem(
                 icon: Icon(Icons.person), title: Text('我的')),
           ],
-          fixedColor: Colors.green,
+          fixedColor: Colors.teal,
           currentIndex: _currentPageIndex,
           onTap: _onPageChange),
     );
