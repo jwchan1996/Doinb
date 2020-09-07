@@ -19,6 +19,10 @@ class _HomePageState extends State<HomePage> {
     Navigator.pushNamed(context, '/get_user_media');
   }
 
+  void _onOpenPageEffect() {
+    Navigator.pushNamed(context, '/page_effect');
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -52,6 +56,15 @@ class _HomePageState extends State<HomePage> {
               child: Text('getUserMedia'),
               shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
               onPressed: _onGetUserMedia,
+            ),
+            FlatButton(
+              color: Colors.blue,
+              highlightColor: Colors.blue[700],
+              colorBrightness: Brightness.dark,
+              splashColor: Colors.grey,
+              child: Text('page effect'),
+              shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+              onPressed: _onOpenPageEffect,
             )
           ],
         ),

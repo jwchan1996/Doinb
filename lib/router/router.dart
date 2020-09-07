@@ -6,6 +6,7 @@ import 'package:doinb/pages/home_stack/mine.dart';
 import 'package:doinb/pages/search.dart';
 import 'package:doinb/pages/github_user.dart';
 import 'package:doinb/pages/get_user_media.dart';
+import 'package:doinb/pages/page_effect.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -26,6 +27,9 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case '/get_user_media':
       return CupertinoPageRoute(
           builder: (context) => GetUserMediaPage());
+    case '/page_effect':
+      return CupertinoPageRoute(
+          builder: (context) => PageEffectPage());
     default:
       return MaterialPageRoute(builder: (context) => App());
   }
