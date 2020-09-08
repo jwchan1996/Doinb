@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:doinb/pages/home_stack/home.dart';
-import 'package:doinb/pages/home_stack/mine.dart';
+import 'package:doinb/pages/home_stack/basic.dart';
+import 'package:doinb/pages/home_stack/widgets.dart';
 
 class App extends StatefulWidget {
   @override
@@ -8,7 +9,7 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
-  final _pages = [HomePage(), MinePage()];
+  final _pages = [HomePage(), BasicPage(), WidgetsPage()];
 
   int _currentPageIndex = 0;
   final _pageController = PageController();
@@ -25,7 +26,7 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: PageView.builder(
-        itemCount: 2,
+        itemCount: 3,
         controller: _pageController,
         itemBuilder: (context, index) => _pages[index],
         physics: NeverScrollableScrollPhysics(),
@@ -35,7 +36,9 @@ class _AppState extends State<App> {
             BottomNavigationBarItem(
                 icon: Icon(Icons.home), title: Text('首页')),
             BottomNavigationBarItem(
-                icon: Icon(Icons.person), title: Text('我的')),
+                icon: Icon(Icons.inbox), title: Text('组件基础')),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.widgets), title: Text('332组件')),
           ],
           fixedColor: Colors.teal,
           currentIndex: _currentPageIndex,
