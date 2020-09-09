@@ -26,6 +26,8 @@ dependencies:
   flutter_flexible_toast: any
   # 支持markdown
   flutter_markdown: ^0.4.4
+  # 支持markdown
+  markdown_widget: ^1.2.3
   # 加载loading
   flutter_spinkit: ^4.1.2
   # 音视频通话

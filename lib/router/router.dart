@@ -10,6 +10,7 @@ import 'package:doinb/pages/get_user_media.dart';
 import 'package:doinb/pages/page_effect.dart';
 
 import 'package:doinb/pages/basic/index.dart';
+import 'package:doinb/pages/basic/Text/index.dart';
 
 Route<dynamic> generateRoute(RouteSettings settings) {
   switch (settings.name) {
@@ -44,6 +45,9 @@ Route<dynamic> generateRoute(RouteSettings settings) {
     case '/basic/index':
       return MaterialPageRoute(
           builder: (context) => BasicIndexPage());
+    case '/basic/Text/index':
+      return MaterialPageRoute(
+          builder: (context) => BasicTextIndexPage());
 
     default:
       return MaterialPageRoute(builder: (context) => App());
