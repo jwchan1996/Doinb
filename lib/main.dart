@@ -11,7 +11,7 @@ class Main extends StatelessWidget {
     return MaterialApp(
       title: 'Doinb',
       theme: ThemeData(
-        primarySwatch: Colors.teal,
+        primarySwatch: Colors.blue,
       ),
       home: new SplashScreen(seconds: 3),
       onGenerateRoute: router.generateRoute,

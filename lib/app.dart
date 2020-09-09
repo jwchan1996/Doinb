@@ -40,7 +40,7 @@ class _AppState extends State<App> {
             BottomNavigationBarItem(
                 icon: Icon(Icons.widgets), title: Text('332组件')),
           ],
-          fixedColor: Colors.teal,
+          fixedColor: Colors.blue,
           currentIndex: _currentPageIndex,
           onTap: _onPageChange),
     );

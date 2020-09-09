@@ -24,6 +24,8 @@ dependencies:
   dio: ^3.0.3
   # 吐司
   flutter_flexible_toast: any
+  # 支持markdown
+  flutter_markdown: ^0.4.4
   # 加载loading
   flutter_spinkit: ^4.1.2
   # 音视频通话
