@@ -59,6 +59,8 @@ flutter:
     - assets/images/clicli-logo.png
     - assets/images/clicli-logo-z.png
 
+    - assets/md/basic/
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
